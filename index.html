@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="landing page & introduction">
+        <meta name="author" content="Smart Tribe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:site-name" content="" />
+        <meta property="og:description" content="..." />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('icons/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('icons/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('icons/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('icons/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('icons/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('icons/apple-icon-120x120.png.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('icons/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('icons/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('icons/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('icons/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icons/favicon-16x16.png') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Smart Tribe</title>
+
+        <!-- Jquery CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Google font : Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+        <!-- Main style -->
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/state.css">
+
+        <!-- Smooth show effect -->
+        <script>
+            $(document).ready(function(){
+                const ratio = .1
+                const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: ratio
+                }
+                const handleIntersect = function (entries, observer){
+                entries.forEach(function (entry){
+                    if (entry.intersectionRatio > ratio){
+                    entry.target.classList.add('reveal-visible')
+                    observer.unobserve(entry.target)
+                    }
+                })
+                }
+                const observer = new IntersectionObserver(handleIntersect, options)
+                document.querySelectorAll('[class*="reveal-"]').forEach(function (r) {
+                    observer.observe(r)
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#home" class="logo"><span class="color">SMART</span>TRIBE</a>
+                    </div>
+                    <div class="col-6 text-right">
+                        <span id="btnMenu" class="btn btn-secondary">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Menu -->
+        <div class="main-menu">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#team">thanks</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Wrapper -->
+        <div class="main-wrapper">
+
+            <!-- Main Banner -->
+            <section id="home" class="main-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-8 reveal-2">
+                            <h1>Blockchain In Indian Country</h1>
+                            <p>Providing tools for the next generation of native american leadership.</br></p>
+                            <a class="btn btn-md btn-primary" href="https://github.com/SMARTTRIBENET/SmartTribe.git">Download <i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-3">
+                            <img class="img-fluid" src="img/blockchain.png" alt="/">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section id="about" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <hr>
+                            <h2 class="page-title">About us</h2>
+                        </div>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p><strong>Driven</strong>  by a passion for blockchain and a love for our people and culture, we are going to work around the clock to ensure that this project benefits tribal communities. Our first objective is to provide tribal governments and organizations with the opportunity to learn, understand, particapate and even contribute to the developement and adoption of blockchain technology.</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p><strong>Providing</strong>  a secure, scalable, advanced, and adaptable blockchain had to be standard. Smart Tribe is making it happen in the Form of "Native Derivatives Network". To meet this demand we built ontop of<a href="https://substrate.io" target="_blank"> Substrate Technology's</a> framework. Learn more about blockchain and find detailed documentation about the tools used to make this possilble. Check out features for preview of what we are building. </p>  
+                        </article>
+                        <article class="col-12 reveal-2 mt-4">
+                            <h3>Join us:</h3>
+                            <a target="_blank" href="#"><i class="fab fa-discord"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-telegram-plane"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-github"></i></a>   
+                        </article>
+                    </div>
+                </div> 
+            </section>
+
+            <!-- Features section -->
+            <section id="features" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <hr>
+                            <h2 class="page-title">Features</h2>
+                        </div>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <i class="fas fa-landmark"></i>
+                            <a  href="gov.html" class="link"><span class="color">On Chain Governance</span></a>
+                            <p>Details Coming Soon</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <i class="fas fa-id-card"></i>
+                        <a  href="url" class="link"><span class="color">Digital Identities</span></a>
+                        <p>Details Coming Soon</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <i class="fas fa-file-signature"></i>
+                            <a  href="url" class="link"><span class="color">SmartContracts</span></a>
+                            <p>Details Coming Soon</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <i class="fas fa-utensil-spoon"></i>
+                            <a  href="url" class="link"><span class="color">Forkless upgrades</span></a>
+                            <p>Details Coming Soon</p>   
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team section -->
+            <section id="team" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Meet our team and contributors</p>
+                            <h2 class="page-title">Team</h2>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <article class="card">
+                                <img src="img/devon.jpg" alt=" Devon Eagle Hall picture ">
+                                <h3>Devon Eagle Hall</h3>
+                                <h4>CEO</h4>
+                                <p>"Its times like these that define generations"</p>
+                                <p>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>     
+                                </p>   
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-3">
+                            <article class="card">
+                                <img src="https://via.placeholder.com/150x150" alt="John Doe picture">
+                                <h3></h3>
+                                <h4></h4>
+                                <p>Details Coming Soon</p>
+                                <p>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>     
+                                </p>        
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-4">
+                            <article class="card">
+                                <img src="https://via.placeholder.com/150x150" alt="John Doe picture">
+                                <h3>Details Coming Soon</h3>
+                                <h4></h4>
+                                <p>Details Coming Soon</p>
+                                <p>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>     
+                                </p>             
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners section -->
+            <section id="partners" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">making it possible</p>
+                            <h2 class="page-title">We Thank You</h2>
+                        </div>
+                        <article class="col-12 reveal-2">
+                            <div class="partners-slider">
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/1.png" alt="Partner 1">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/2.png" alt="Partner 2">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/3.png" alt="Partner 3">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/4.png" alt="Partner 4">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/1.png" alt="Partner 1">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/2.png" alt="Partner 2">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/3.png" alt="Partner 3">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/4.png" alt="Partner 4">
+                                </div>
+                              </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- Roadmap section -->
+            <section id="roadmap" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Our future developement</p>
+                            <h2 class="page-title">Roadmap</h2>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <h3>2022 - Q1-Research-for-development</h3>
+                            <article class="card">
+                                <ul>
+                                    <li><i class="fas fa-check"></i>Research</li>
+                                    <li><i class="fas fa-check"></i>Developing the Use Case</li>
+                                    <li><i class="fas fa-check"></i>Expand to include mutiple use cases</li>
+                                    <li><i class="fas fa-check"></i>launch website</li>
+                                    <li><i class="fas fa-chevron-right"></i>developement path</li>
+                                    <li><i class="fas fa-chevron-right"></i>Release Red-Paper</li>
+                                </ul>                        
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <h3>2022 - Q2</h3>
+                            <article class="card">
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i>Network/promote </li>
+                                    <li><i class="fas fa-chevron-right"></i>Develop Proof of Concept</li>
+                                    <li><i class="fas fa-chevron-right"></i>I.C.O start(private)</li>
+                                    <li><i class="fas fa-chevron-right"></i>Onboard team </li>
+                                    <li><i class="fas fa-chevron-right"></i>Release White-Paper</li>
+                                    <li><i class="fas fa-chevron-right"></i>Apply for licencing</li>
+                                </ul>                       
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <h3>2022 - Q3</h3>
+                            <article class="card"> 
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i>Development of concepts</li>
+                                    <li><i class="fas fa-chevron-right"></i>initial Validator on borad</li>
+                                    <li><i class="fas fa-chevron-right"></i>I.C.O(public)Start</li>
+                                    <li><i class="fas fa-chevron-right"></i>scale testnet</li>
+                                    <li><i class="fas fa-chevron-right"></i> introduce custom runtime</li>
+                                    <li><i class="fas fa-chevron-right"></i> scale runtime </li>
+                                </ul>                       
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <h3>2022 - Q4</h3>
+                            <article class="card"> 
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i>Digital Powwow Start</li>
+                                    <li><i class="fas fa-chevron-right"></i>valladator Selection</li>
+                                    <li><i class="fas fa-chevron-right"></i>Counsle Voted in</li>
+                                    <li><i class="fas fa-chevron-right"></i>Digital Powwow Ends</li>
+                                    <li><i class="fas fa-chevron-right"></i>Contest winners Announced</li>
+                                    <li><i class="fas fa-chevron-right"></i>Launch Mainnet</li>
+                                </ul>
+                            </article>
+                        </div>      
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ressources section -->
+            <section id="ressources" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Lean, Build, Connect</p>
+                            <h2 class="page-title">Ressources</h2>
+                        </div>
+                        <article class="col-6 col-md-4 reveal-2">
+                            <h3><i class="fas fa-book"></i>Learn</h3>
+                            <ul>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-6 col-md-4 reveal-2">
+                            <h3><i class="fas fa-wrench"></i>Build</h3>
+                            <ul>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-6 col-md-4 reveal-2">
+                            <h3><i class="fas fa-link"></i>Connect</h3>
+                            <ul>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Banner -->
+            <div class="footer-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <h2 class="page-title">Native Derivatives Network</h2>
+                            <p>Native Derivatives Network by SmartTribe Development for the 7th Generation</p>
+                            <a target="_blank" href="https://github.com/arthurrebre/ikkuna" class="btn btn-md btn-download">Download <i class="fas fa-cloud-download-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="container">
+                    <div class="row">
+                        <article class="col-12 col-md-3">
+                            <h3>Navigation</h3>
+                            <ul>
+                                <li><a href="#about">About us</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#partners">Partners</a></li>
+                                <li><a href="#roadmap">Roadmap</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Ressources</h3>
+                            <ul>
+                                <li><a href="#">Wallet</a></li>
+                                <li><a href="#">Exchanges</a></li>
+                                <li><a href="#">Stores</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Exchanges</h3>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Community</h3>
+                            <ul>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">Contribute</a></li>
+                            </ul>
+                        </article>
+                        <div class="col-12">
+                            <hr>   
+                        </div>
+                        <div class="col-12 col-md-6 social">
+                            <p>
+                                <a target="_blank" href="https://twitter.com/middle_agency"><i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-discord"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-telegram-plane"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-reddit-alien"></i></a>
+                                <a target="_blank" href="https://github.com/arthurrebre/ikkuna"><i class="fab fa-github"></i></a>                         
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6 copyright">
+                            <p>&copy; 2022 SmartTribe <a target="_blank" href="https://arthurrebre.netlify.app">Smart Tribe Technology</a> & <a target="_blank" href="linkgoeshere">Native Derivative Network</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- PopperJS & Bootstrap CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Slick -->
+        <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+        <script>
+            $('.partners-slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 2
+                    }
+                  }
+                ]
+            });
+        </script>
+        <!-- -->
+        <script src="js/app.js"></script>
+    </body>
+</html>
